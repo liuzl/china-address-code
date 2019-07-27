@@ -1,0 +1,15 @@
+{
+  "name": "addr",
+  "example_url": "http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/",
+  "default_fields": true,
+  "rules": {
+    "root": [
+      {
+        "type": "url",
+        "key": "addr_year",
+        "xpath": "//div[@class='center_list']//a"
+      }
+    ]
+  },
+  "js": ""
+}

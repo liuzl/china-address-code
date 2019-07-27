@@ -1,0 +1,27 @@
+{
+  "name": "addr_year",
+  "example_url": "http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2018/index.html",
+  "default_fields": true,
+  "rules": {
+    "root": [
+      {
+        "type": "dom",
+        "key": "province",
+        "xpath": "//table[@class='provincetable']//a"
+      }
+    ],
+    "province": [
+      {
+        "type": "url",
+        "key": "province",
+        "xpath": "."
+      },
+      {
+        "type": "text",
+        "key": "name",
+        "xpath": "."
+      }
+    ]
+  },
+  "js": ""
+}

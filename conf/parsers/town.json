@@ -1,0 +1,32 @@
+{
+  "name": "town",
+  "example_url": "http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2018/13/05/24/130524101.html",
+  "default_fields": true,
+  "rules": {
+    "root": [
+      {
+        "type": "dom",
+        "key": "village",
+        "xpath": "//table[@class='villagetable']//tr[position()>1]"
+      }
+    ],
+    "village": [
+      {
+        "type": "text",
+        "key": "code",
+        "xpath": "./td[1]"
+      },
+      {
+        "type": "text",
+        "key": "class",
+        "xpath": "./td[2]"
+      },
+      {
+        "type": "text",
+        "key": "name",
+        "xpath": "./td[3]"
+      }
+    ]
+  },
+  "js": ""
+}

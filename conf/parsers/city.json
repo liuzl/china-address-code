@@ -1,0 +1,32 @@
+{
+  "name": "city",
+  "example_url": "http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2018/13/1305.html",
+  "default_fields": true,
+  "rules": {
+    "root": [
+      {
+        "type": "dom",
+        "key": "county",
+        "xpath": "//table[@class='countytable']//tr[position()>1]"
+      }
+    ],
+    "county": [
+      {
+        "type": "url",
+        "key": "county",
+        "xpath": "./td[1]/a"
+      },
+      {
+        "type": "text",
+        "key": "code",
+        "xpath": "./td[1]"
+      },
+      {
+        "type": "text",
+        "key": "name",
+        "xpath": "./td[2]"
+      }
+    ]
+  },
+  "js": ""
+}
