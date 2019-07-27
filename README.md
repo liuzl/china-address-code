@@ -3,7 +3,7 @@
 
 ## 抓取方式
 
-通过`github.com/crawlerclub/bcrawler`进行抓取。需要系统有Golang环境，然后执行如下命令安装bcrawler：
+通过[github.com/crawlerclub/bcrawler](https://github.com/crawlerclub/bcrawler)进行抓取。需要系统有Golang环境，然后执行如下命令安装bcrawler：
 
 ```sh
 go get github.com/crawlerclub/bcrawler
