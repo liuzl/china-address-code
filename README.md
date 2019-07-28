@@ -1,6 +1,12 @@
 # china-address-code
 国家统计局中国省市县乡村5级地址抓取，http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2018/index.html
 
+使用已经抓取处理好的数据可以直接[下载](2018_addr.tsv.gz)。
+
+## 数据格式说明
+
+处理好的数据是tsv格式的文本文件，第一列是区划代码，第二列是地址名称。其中地址类型根据区划代码的位数进行区分：省级2位、市级4位、县级6位、乡级9位、村级12位。
+
 ## 抓取方式
 
 通过[github.com/crawlerclub/bcrawler](https://github.com/crawlerclub/bcrawler)进行抓取。需要系统有Golang环境，然后执行如下命令安装bcrawler：
@@ -20,6 +26,7 @@ bcrawler -sleep 2 -log_dir ./log -alsologtostderr -conf ./conf
 
 ```sh
 python process.py > 2018_addr.tsv
+#gzip 2018_addr.tsv
 ```
 
 ### 快速运行
