@@ -16,6 +16,12 @@ bcrawler安装完成后，执行如下命令进行抓取：
 bcrawler -sleep 2 -log_dir ./log -alsologtostderr -conf ./conf
 ```
 
+抓取完成后，执行如下命令进行数据处理：
+
+```sh
+python process.py > 2018_addr.tsv
+```
+
 ### 快速运行
 
 ```sh
